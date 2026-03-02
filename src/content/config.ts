@@ -27,10 +27,10 @@ const organization = defineCollection({
       lng: z.number(),
     }),
     mapUrl: z.string(),
+    facebook: z.string().optional(),
+    facebookUrl: z.string().optional(),
     instagram: z.string().optional(),
     instagramUrl: z.string().optional(),
-    booking: z.string().optional(),
-    bookingUrl: z.string().optional(),
   }),
 });
 

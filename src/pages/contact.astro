@@ -61,7 +61,8 @@ const tr = t(lang);
             <label for="lastName" class="block text-sm font-medium text-gray-700">{tr.contact.last_name}</label>
           </div>
         </div>
-        <div class="w-full flex flex-col md:flex-row gap-2">
+
+        <div class="w-full relative float-label-group">
           <input
               type="text" id="name" name="name" required
               class="w-full p-2 border border-gray-300 rounded"
@@ -72,6 +73,9 @@ const tr = t(lang);
               class="w-full p-2 border border-gray-300 rounded"
               placeholder={tr.contact.last_name_placeholder}
           />
+          <label for="subject" class="absolute left-4 top-4 text-gray-500 transition-all peer-focus:text-xs peer-focus:top-2 peer-focus:text-sky-950 peer-valid:text-xs peer-valid:top-2 pointer-events-none"
+            >Predmet</label
+          >
         </div>
 
         <label for="email" class="block text-sm font-medium text-gray-700">{tr.contact.email}</label>

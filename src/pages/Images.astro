@@ -50,8 +50,8 @@ const images = [
 <style>
   body {
     margin: 0;
-    font-family: sans-serif;
-    background: #f3f3f3;
+    font-family: 'Exo 2', sans-serif;
+    background: #f8fafc; /* light slate background */
   }
 
   .imagesMain {
@@ -60,16 +60,38 @@ const images = [
     padding: 6rem 2rem 2rem;
     max-width: 1200px;
     margin: auto;
+    min-height: 100vh;
   }
 
-  .comicPanel {
-    display: inline-block;
-    width: 100%;
-    margin: 0 0 1rem;
-    break-inside: avoid;
-    border: 3px solid black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    background: white;
+  .gallery-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Masonry-like CSS Grid approach */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+  }
+
+  /* Make some items span 2 rows for masonry effect */
+  .gallery-item:nth-child(2n) {
+    grid-row: span 2;
+  }
+  .gallery-item:nth-child(5n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item {
+    position: relative;
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -80,10 +102,9 @@ const images = [
     z-index: 1;
   }
 
-  .comicPanel img {
-    display: block;
+  .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
 

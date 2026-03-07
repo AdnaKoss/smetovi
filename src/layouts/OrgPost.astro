@@ -84,9 +84,15 @@ const tr = t(lang);
             )
           }
           <h2 class="text-lg font-atkinson text-gray-500">
-            {tr.organizations.location}: <a href={mapUrl} class="text-blue-500 underline"
-              >{tr.organizations.show_on_map}</a
+            {tr.organizations.location}:{" "}
+            <a
+              href={mapUrl}
+              class="text-blue-500 underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              {tr.organizations.show_on_map}
+            </a>
           </h2>
         </div>
         <slot />

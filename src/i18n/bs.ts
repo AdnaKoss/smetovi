@@ -24,6 +24,7 @@ export const bs = {
         work_hours: "Radno vrijeme",
         open: "Otvoreno",
         closed: "Zatvoreno",
+        unknown: "Nepoznato",
         type_prefix: "Aktivnosti",
         phone: "Telefon",
         contact: "Kontakt",

@@ -6,7 +6,7 @@ phone: "--"
 contact: "--"
 description: "Sovina šumska učionica je edukativni prostor na otvorenom, smješten kod izviđačkog doma, namijenjen za učenje o prirodi i ekologiji."
 heroImage: "/images/organizations/sovinasumskaucionica/sovinasumska.jpg"
-location: [44.244, 17.980]
+location: [44.2455900, 17.980]
 mapUrl: "https://maps.google.com/?q=44.244,17.980"
 ---
 
